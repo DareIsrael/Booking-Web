@@ -60,7 +60,7 @@ const Booking = ({tour, avgRating}) => {
 
             navigate("/thank-you")
         } catch (err) {
-          alert(err.message)
+          alert('fill the form')
         }
 
         // console.log(credentials)
@@ -82,14 +82,14 @@ const Booking = ({tour, avgRating}) => {
      <h5>Information</h5>
       <Form className='booking__info-form' onSubmit={handleClick}>
        <FormGroup>
-        <input type='text' placeholder='Full Name' id='fullName' required onChange={handleChange}></input>
+        <input type='text' placeholder='Full Name' required id='fullName'  onChange={handleChange}></input>
        </FormGroup>
        <FormGroup>
-        <input type='text' placeholder='Phone' id='phone' required onChange={handleChange}></input>
+        <input type='text' placeholder='Phone' required id='phone'  onChange={handleChange}></input>
        </FormGroup>
        <FormGroup className='d-flex align-items-center gap-3'>
-        <input type='date' placeholder='' id='bookAt' required onChange={handleChange}></input>
-        <input type='number' placeholder='Traveller' id='guestSize' required onChange={handleChange}></input>
+        <input type='date' placeholder='' required  id='bookAt' onChange={handleChange}></input>
+        <input type='number' placeholder='Traveller' required  id='guestSize'  onChange={handleChange}></input>
        </FormGroup>
       </Form>
      </div>
