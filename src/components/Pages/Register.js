@@ -11,9 +11,10 @@ import { BASE_URL } from '../../utils/config'
 const Register = () => {
   
   const [credentials, setCredentials] = useState({
-    userName:undefined,
-    email:undefined,
-    password:undefined
+    userName:"",
+    email:"",
+    password:"",
+    phone:0
 })
 
 const {dispatch } = useContext (AuthContext)
@@ -67,6 +68,9 @@ const handleClick = async e => {
           </FormGroup>
           <FormGroup>
             <input type='email' placeholder='Email' required id='email' onChange={handleChange}/>
+          </FormGroup>
+          <FormGroup>
+            <input type='number' placeholder='Phone' required id='number' onChange={handleChange}/>
           </FormGroup>
           <FormGroup>
             <input type='password' placeholder='Password' required id='password' onChange={handleChange}/>
