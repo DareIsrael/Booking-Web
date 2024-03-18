@@ -7,6 +7,7 @@ import ava04 from '../../assets/images/ava04.jpeg'
 import ava05 from '../../assets/images/ava05.jpeg'
 import ava06 from '../../assets/images/ava06.jpeg'
 import ava07 from '../../assets/images/ava07.jpeg'
+import Subtitle from '../../shared/Subtitle'
 
 
 const Testimonials = () => {
@@ -44,6 +45,8 @@ const Testimonials = () => {
   }
 
   return (
+    <section>
+    <Subtitle subtitle={"Traveller's comments"} />
     <Slider {...settings}>
       <div className='testimonial py-4 px-3'>
       <p>
@@ -159,6 +162,7 @@ const Testimonials = () => {
 
       
     </Slider>
+    </section>
   )
 }
 

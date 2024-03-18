@@ -1,0 +1,22 @@
+
+.fail span i {
+    font-size: 4rem;
+    color:  red;
+}
+
+.fail h1 {
+    font-size: 3.6rem;
+    font-family: var(--subtitle-font-name);
+}
+
+.success {
+    color: green;
+
+}
+
+.failed {
+    color: red;
+}
+.fail{
+    color: red;
+}

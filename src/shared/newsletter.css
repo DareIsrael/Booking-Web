@@ -66,4 +66,7 @@
     .newsletter__content p {
         display: none;
     }
+    .newsletter h2 {
+        font-size: 1.1rem;
+    }
    }

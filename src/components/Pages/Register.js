@@ -9,6 +9,8 @@ import { AuthContext } from '../context/AuthContext'
 import { BASE_URL } from '../../utils/config'
 
 const Register = () => {
+
+  const [reg, setReg] = useState()
   
   const [credentials, setCredentials] = useState({
     userName:"",
@@ -37,13 +39,21 @@ const handleClick = async e => {
     })
     const result = await res.json()
 
-    if (!res.ok) alert(result.message)
-
+    if (!res.ok) {
+      alert(result.message)
+      navigate('/failtoregister');
+      return;
+    }
+      
+    
     dispatch({type:'REGISTER_SUCCESS'})
-    navigate('/login')
-
-  } catch (err) {
+   
+    navigate('/successfulregister')
+    
+        } catch (err) {
+      
    alert(err.message);
+     navigate('/failtoregister')
   }
 };
 
@@ -70,12 +80,13 @@ const handleClick = async e => {
             <input type='email' placeholder='Email' required id='email' onChange={handleChange}/>
           </FormGroup>
           <FormGroup>
-            <input type='number' placeholder='Phone' required id='number' onChange={handleChange}/>
+            <input type='number' placeholder='Phone' required id='phone' onChange={handleChange}/>
           </FormGroup>
           <FormGroup>
             <input type='password' placeholder='Password' required id='password' onChange={handleChange}/>
           </FormGroup>
           <Button className='btn secondary_btn auth__btn' type='submit'>Create Account</Button>
+           
          </Form>
          <p>Already have an account?<Link to='/login'>Login</Link></p>
         </div>

@@ -8,6 +8,8 @@ import Login from '../Pages/Login'
 import Register from '../Pages/Register'
 import ThankYou from '../Pages/ThankYou'
 import SearchResultList from '../Pages/SearchResultList'
+import SuccessfulRegister from '../Pages/SuccessfulRegister'
+import FailedToRegister from '../Pages/FailedToRegister'
 
 const Router = () => {
   return (
@@ -21,6 +23,8 @@ const Router = () => {
         <Route path= '/register' element={<Register />} />
         <Route path= '/thank-you' element={<ThankYou />} />
         <Route path= '/tours/search' element={<SearchResultList />} />
+        <Route path= '/successfulregister' element={<SuccessfulRegister />} />
+        <Route path= '/failtoregister' element={<FailedToRegister />} /> 
     </Routes>
   )
 }

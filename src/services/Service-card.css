@@ -30,3 +30,13 @@
     font-size: .9rem;
     color: var(--text-color);
 }
+
+@media only screen and (max-width: 576px) {
+    .service__item h5 {
+        font-size: 0.9rem;
+    }
+
+    .service__item p {
+        font-size: 0.8rem;
+    }
+}
